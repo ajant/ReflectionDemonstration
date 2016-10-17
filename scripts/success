@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once '../vendor/autoload.php';
+
+use ReflectionDemonstration\Demonstration;
+
+$demonstration = new Demonstration();
+$reflection = new ReflectionClass($demonstration);
+
+$reflectionProperty = $reflection->getProperty('privateProperty');
+$reflectionProperty->setAccessible(true);
+
+var_dump($reflectionProperty->getValue($demonstration));
+
+$reflectionProperty = $reflection->getProperty('protectedProperty');
+$reflectionProperty->setAccessible(true);
+
+var_dump($reflectionProperty->getValue($demonstration));
+
+$reflectionMethod = $reflection->getMethod('protectedMethod');
+$reflectionMethod->setAccessible(true);
+
+var_dump($reflectionMethod->invoke($demonstration));
+
+$reflectionMethod = $reflection->getMethod('protectedMethod');
+$reflectionMethod->setAccessible(true);
+
+var_dump($reflectionMethod->invoke($demonstration));

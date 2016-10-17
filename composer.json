@@ -1,0 +1,25 @@
+{
+  "name": "ajant/reflection-demonstration",
+  "authors": [
+    {
+      "name": "Jovanovic Aleksandar",
+      "email": "ajant.github@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "description": "Demonstration of reflection library features",
+  "homepage": "https://github.com/ajant/ReflectionDemonstration",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4"
+  },
+  "autoload": {
+    "psr-4": {
+      "ReflectionDemonstration\\": "src",
+      "ReflectionDemonstration\\Test\\": "test"
+    }
+  }
+}

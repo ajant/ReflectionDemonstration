@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once '../vendor/autoload.php';
+
+use ReflectionDemonstration\Demonstration;
+
+$demonstration = new Demonstration();
+
+var_dump($demonstration->privateProperty);
+
+var_dump($demonstration->protectedProperty);
+
+var_dump($demonstration->privateMethod());
+
+var_dump($demonstration->protectedMethod());
