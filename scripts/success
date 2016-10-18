@@ -19,7 +19,7 @@ $reflectionProperty->setAccessible(true);
 
 var_dump($reflectionProperty->getValue($demonstration));
 
-$reflectionMethod = $reflection->getMethod('protectedMethod');
+$reflectionMethod = $reflection->getMethod('privateMethod');
 $reflectionMethod->setAccessible(true);
 
 var_dump($reflectionMethod->invoke($demonstration));
